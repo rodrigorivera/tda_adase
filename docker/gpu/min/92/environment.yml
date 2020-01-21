@@ -1,0 +1,30 @@
+name: base                                                                   
+channels:
+  - base
+  - rapidsai
+  - nvidia
+  - numba                                                             
+  - conda-forge
+  - anaconda
+  - defaults                                                              
+dependencies:
+  - python=3.5
+  - pip
+  - setuptools
+  - rapids
+  - dask                                                          
+  - pandas
+  - scikit-learn
+  - numpy
+  - scipy
+  - cloudpickle
+  - matplotlib
+  - Cython
+  - future
+  - protobuf
+  - enum34
+  - pyyaml
+  - typing
+  - jupyterlab
+  - jupyter
+  - tensorflow-gpu=1.0

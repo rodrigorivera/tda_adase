@@ -1,0 +1,25 @@
+
+
+
+
+
+
+version: '2.3'
+services:
+    ntbk-gpu-tda_adase:  
+      image: img_gpu_min-tda_adase:sotnikovg
+      container_name: cntnr_gpu_min-tda_adase-sotnikovg
+      build: docker/gpu/min/90
+      volumes:
+         - ./:/root
+      # Here Cookiecutter will try to append based on CPU or GPU# Runtime for GPU
+      runtime: nvidia
+      ipc: host
+      cpuset: "29-55"
+      mem_limit: 64g
+      command: jupyter lab --no-browser --ip=0.0.0.0 --allow-root --NotebookApp.token='123Notebook' --notebook-dir='/root'
+      
+      ports:
+         - "0.0.0.0:8082:8888"
+      stdin_open: true
+      tty: true
